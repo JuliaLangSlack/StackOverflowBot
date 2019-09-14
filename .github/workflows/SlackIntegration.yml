@@ -3,7 +3,7 @@ name: SendToSlack
 # on:
 #   schedule:
 #     # * is a special character in YAML so you have to quote this string
-#     - cron:  '*/60 * * * *'
+#     - cron:  '*/60 * * * *' 
     
 on: push #Used for Debug
 
