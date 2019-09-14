@@ -1,17 +1,17 @@
 name: CI
 
-- cron: 0 2 * * 1-5
-
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
+    
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+
