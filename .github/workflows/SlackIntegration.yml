@@ -1,7 +1,6 @@
-name: CI
+name: SendToSlack
 
-on:
-  schedule:
+on:[push,schedule]schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '*/15 * * * *'
     
