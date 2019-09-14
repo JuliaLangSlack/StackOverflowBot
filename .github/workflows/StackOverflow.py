@@ -7,7 +7,7 @@ SITE = StackAPI('stackoverflow')
 
 currenttime = int(time.time()) #Get current time in Unix Epcot Time
 
-oneHourAgo = currenttime - 36000 #rewind 10 hours for this test. 
+oneHourAgo = currenttime - 3600 #rewind 1 hour since that's the frequency the job run's at. 
 
 posts = SITE.fetch('questions', fromdate = oneHourAgo, todate = currenttime, tagged = 'Julia')
 
