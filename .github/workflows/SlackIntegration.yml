@@ -1,9 +1,9 @@
 name: SendToSlack
 
-# on:[push,schedule]schedule:
-#     # * is a special character in YAML so you have to quote this string
-#     - cron:  '*/15 * * * *'
-on: push
+on:[push,schedule]schedule:
+     # * is a special character in YAML so you have to quote this string
+     - cron:  '*/60 * * * *'
+#on: push #Used for Debug
 
 jobs:
   build:
@@ -15,5 +15,5 @@ jobs:
     - name: Run stackapi install
       run: pip install stackapi
     - name: Run a one-line script
-      run: curl -X POST -H 'Content-type:application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SHERPASlackHook }}
+      run: python StackOverflow.py
 
