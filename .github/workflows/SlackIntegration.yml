@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: curl -X POST -H 'Content-type:application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+      run: curl -X POST -H 'Content-type:application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SHERPASlackHook }}
 
