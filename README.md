@@ -7,3 +7,5 @@ Edit the webhooks here: https://api.slack.com/apps/AMZKBBYLS/incoming-webhooks?s
 YML Check: https://yamlchecker.com
 
 Python SO API Package: https://stackapi.readthedocs.io/en/latest/user/complex.html
+
+Curl to Python conversion: https://curl.trillworks.com/#python
