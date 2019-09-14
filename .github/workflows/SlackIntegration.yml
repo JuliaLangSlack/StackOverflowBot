@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run stackapi install
-    - run: pip install stackapi
+      run: pip install stackapi
     - name: Run a one-line script
       run: curl -X POST -H 'Content-type:application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SHERPASlackHook }}
 
