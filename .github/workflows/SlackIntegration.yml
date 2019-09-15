@@ -17,5 +17,5 @@ jobs:
     - name: Run stackapi install
       run: pip install stackapi
     - name: Run a one-line script
-      run: python /Users/runner/runners/2.157.5/work/StackoverflowAndSlack/StackoverflowAndSlack/.github/workflows/StackOverflow.py
+      run: python /Users/runner/runners/2.157.5/work/StackoverflowAndSlack/StackoverflowAndSlack/.github/workflows/StackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
 
