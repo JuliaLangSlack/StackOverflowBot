@@ -1,6 +1,8 @@
 # StackoverflowAndSlack
 Integration between Stackoverflow and Slack for the JuliaLang.slack.com workspace. 
 
+Every 30 mminutes, a GitHub Action will run that pings the StackOverflow API to see if there's any new questions. If there is, it post's them in the #stackoverflow-bridged channel on the JuliaLang SLack. 
+
 
 YML Check: https://yamlchecker.com
 
