@@ -1,6 +1,9 @@
 from stackapi import StackAPI
 import time
 import requests
+import sys
+
+webHookURL = sys.argv[1]
 
 SITE = StackAPI('stackoverflow')
 
@@ -23,7 +26,7 @@ for k,v in posts.items():
                     print(v)
                     data = ('{"text":"%s"}' % v)
                     
-                    response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+                    response = requests.post(webHookURL, headers=headers, data=data)
                     
                     print(response)
                 #End of if
@@ -31,5 +34,3 @@ for k,v in posts.items():
         #End of internal for loop. 
     #End of if. 
 #End of for
-
-#Test channel: https://hooks.slack.com/services/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
