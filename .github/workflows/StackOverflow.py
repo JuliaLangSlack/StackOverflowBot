@@ -1,15 +1,14 @@
 from stackapi import StackAPI
 import time
-import os
 import requests
 
 SITE = StackAPI('stackoverflow')
 
 currenttime = int(time.time()) #Get current time in Unix Epcot Time
 
-oneHourAgo = currenttime - 3600 #rewind 1 hour since that's the frequency the job run's at. 
+thirtyMinsAgo = currenttime - 1800 #rewind 30 minutes since that's the frequency the job run's at. 
 
-posts = SITE.fetch('questions', fromdate = oneHourAgo, todate = currenttime, tagged = 'Julia')
+posts = SITE.fetch('questions', fromdate = thirtyMinsAgo, todate = currenttime, tagged = 'Julia')
 
 headers = {
     'Content-type': 'application/json',
