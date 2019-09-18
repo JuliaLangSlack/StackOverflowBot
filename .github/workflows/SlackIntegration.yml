@@ -1,11 +1,11 @@
 name: SendToSlack
 
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/30 * * * *' 
+# on:
+#   schedule:
+#     # * is a special character in YAML so you have to quote this string
+#     - cron:  '*/30 * * * *' 
     
-# on: push #Used for Debug
+on: push #Used for Debug
 
 jobs:
   build:
@@ -16,6 +16,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run stackapi install
       run: pip install stackapi
+    - name: Run check of pwd
+      run: pwd
     - name: Run a one-line script
       run: python ./StackOverflowBot/.github/workflows/StackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
 
