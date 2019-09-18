@@ -19,5 +19,5 @@ jobs:
     - name: Run check of pwd
       run: pwd
     - name: Run a one-line script
-      run: python ./StackOverflowBot/.github/workflows/StackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
+      run: python ./.github/workflows/StackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
 
