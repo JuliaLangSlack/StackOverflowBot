@@ -20,9 +20,11 @@ jobs:
       run: pwd
     - name: Run a one-line script
       run: python ./.github/workflows/StackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
-    - name: Run git add check
-      run: git add .
-    - name: Run git commit check
-      run: git commit -m "Autoupdate of Logs"
-    - name: Run git push check
-      run: git push
+      
+# We can use git commands to log if FireBase does not pan out.       
+#     - name: Run git add check
+#       run: git add .
+#     - name: Run git commit check
+#       run: git commit -m "Autoupdate of Logs"
+#     - name: Run git push check
+#       run: git push
