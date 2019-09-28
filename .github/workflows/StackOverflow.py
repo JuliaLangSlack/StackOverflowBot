@@ -22,6 +22,7 @@ for k,v in posts.items():
         #print("KEY: " + str(k) + " VALUES: " + str(v))
         for item in v: 
             for k,v in item.items():
+                print(k)
                 if k == "link":
                     print(v)
                     data = ('{"text":"%s"}' % v)
