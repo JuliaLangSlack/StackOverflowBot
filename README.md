@@ -15,3 +15,5 @@ Python SO API Package: https://stackapi.readthedocs.io/en/latest/user/complex.ht
 Curl to Python conversion: https://curl.trillworks.com/#python
 
 Slack App settings page: https://api.slack.com/apps/AN12MEVDH/general?
+
+Slack Message formatting check: https://api.slack.com/docs/messages/builder?msg=%7B%22text%22%3A%20%22This%20is%20a%20line%20of%20text.%5CnAnd%20this%20is%20another%20one.%22%7D
