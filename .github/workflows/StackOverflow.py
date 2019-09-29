@@ -46,7 +46,7 @@ for k,v in posts.items():
                     #print("Owner2: " + str(owner)) #Used for DEBUG
                     #print("answer_count" + str(v)) #Used for DEBUG
                     
-                    data = ('{ "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, currenttime, str(answer_count)))
+                    data = ('{ "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, link, currenttime, str(answer_count)))
                     #print(data + "\n") #Used for DEBUG
                     
                     response = requests.post(webHookURL, headers=headers, data=data)
