@@ -23,24 +23,31 @@ for k,v in posts.items():
         for item in v: 
             title = ""
             owner = ""
-            is_answered = ""
+            answer_count = ""
             link = ""            
             for k,v in item.items():
                 
                 if k == "title":
                     title = v
+                    #print("Title1: " + str(title)) #Used for DEBUG                    
                 elif k == "owner":
                     for name_key, name_value in v.items():
                         if name_key == "display_name":
                             owner = name_value
-                    #print("Owner: " + str(owner)) #Used for DEBUG
-                elif k == "is_answered":
-                    print("is_answered" + str(v))
-                    is_answered = v
+                    #print("Owner1: " + str(owner)) #Used for DEBUG
+                elif k == "answer_count":
+                    #print("answer_count" + str(v)) #Used for DEBUG  
+                    answer_count = v
                 elif k == "link":
                     link = v
-                    currenttime = int(time.time())
-                    data = ('{ "attachments": [ { "color": "#36a64f", "author_name": "author_name : %s", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Is Answered", "value": "%s", "short": false } ] } ] }' % (owner, title, link, link, currenttime, is_answered))
+                    currenttime = int(time.time())  
+                    
+                    #print("Title2: " + str(title)) #Used for DEBUG                    
+                    #print("Owner2: " + str(owner)) #Used for DEBUG
+                    #print("answer_count" + str(v)) #Used for DEBUG
+                    
+                    data = ('{ "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, currenttime, str(answer_count)))
+                    #print(data + "\n") #Used for DEBUG
                     
                     response = requests.post(webHookURL, headers=headers, data=data)
                     
