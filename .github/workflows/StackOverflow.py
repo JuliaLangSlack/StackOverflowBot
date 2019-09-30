@@ -17,44 +17,43 @@ headers = {
     'Content-type': 'application/json',
 }
 
+
 for k,v in posts.items():
     if k == "items":
-        #print("KEY: " + str(k) + " VALUES: " + str(v))
-        for item in v: 
+        for item in v:
             title = ""
             owner = ""
             answer_count = ""
             link = ""            
-            for k,v in item.items():
+            for key,value in item.items():
+                #print("Key: " + str(key) + " Value: " + str(value)) #Used for DEBUG
                 
-                if k == "title":
-                    title = v
+                if key == "title":
+                    title = value
                     #print("Title1: " + str(title)) #Used for DEBUG                    
-                elif k == "owner":
-                    for name_key, name_value in v.items():
+                elif key == "owner":
+                    for name_key, name_value in value.items():
                         if name_key == "display_name":
                             owner = name_value
-                    #print("Owner1: " + str(owner)) #Used for DEBUG
-                elif k == "answer_count":
-                    #print("answer_count" + str(v)) #Used for DEBUG  
-                    answer_count = v
-                elif k == "link":
-                    link = v
-                    currenttime = int(time.time())  
-                    
-                    #print("Title2: " + str(title)) #Used for DEBUG                    
-                    #print("Owner2: " + str(owner)) #Used for DEBUG
-                    #print("answer_count" + str(v)) #Used for DEBUG
-                    
-                    data = ('{ "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, link, currenttime, str(answer_count)))
-                    #print(data + "\n") #Used for DEBUG
-                    
-                    response = requests.post(webHookURL, headers=headers, data=data)
-                    
-                    print(response)
-                    
+                elif key == "answer_count":
+                    answer_count = value
+                elif key == "link":
+                    link = value
+                   
                 #End of if
+                
             #End of for
+            
+            currenttime = int(time.time()) 
+            data = ('{ "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, link, currenttime, str(answer_count)))
+            
+            # print(data + "\n") #Debug. 
+            
+            # WARNING: Un-commenting this line will push to prod. 
+            response = requests.post(webHookURL, headers=headers, data=data)
+            print(response)
+            # WARNING     
+                            
         #End of internal for loop. 
     #End of if. 
 #End of for
