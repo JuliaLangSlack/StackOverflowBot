@@ -2,7 +2,6 @@ from stackapi import StackAPI
 import time
 import requests
 import sys
-from firebase import firebase  
 
 webHookURL = sys.argv[1]
 
@@ -48,9 +47,9 @@ for k,v in posts.items():
             if (answer_count == 0):
                 data = ('{ "text": "Question re-posted since no one answered yet", "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, link, currenttime, str(answer_count)))
                 # print(data + "\n") #Debug. 
-                # WARNING: Un-commenting this line will push to prod. 
+                # *WARNING*: Un-commenting this line will push to prod. 
                 response = requests.post(webHookURL, headers=headers, data=data)
-                # WARNING
+                # *WARNING*
                 print(response)      
                 
             #End of if
