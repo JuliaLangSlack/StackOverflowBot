@@ -1,23 +1,23 @@
 name: RePostToSlack
 
-on:
-    schedule:
-        # * is a special character in YAML so you have to quote this string
-        - cron:  '*/1440 * * * *' 
-        # Run job once a day. 
-        
-# on: push #Used for Debug
+# on:
+#   schedule:
+#     # * is a special character in YAML so you have to quote this string
+#     - cron:  '*/1440 * * * *' 
+    
+on: push #Used for Debug
 
 jobs:
-    build:
+  build:
 
-        runs-on: macOS-latest
-
-        steps:
-        - uses: actions/checkout@v1
-        - name: Run stackapi install
-            run: pip install stackapi
-        - name: Run check of pwd
-            run: pwd
-        - name: Run a one-line script
-            run: python ./.github/workflows/RePostStackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run stackapi install
+      run: pip install stackapi
+    - name: Run check of pwd
+      run: pwd
+    - name: Run a one-line script
+      run: python ./.github/workflows/RePostStackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
+      
