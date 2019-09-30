@@ -1,11 +1,12 @@
 name: RePostToSlack
 
-# on:
-#   schedule:
-#     # * is a special character in YAML so you have to quote this string
-#     - cron:  '*/1440 * * * *' 
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/1440 * * * *' 
+    # Run once a day! 
     
-on: push #Used for Debug
+# on: push #Used for Debug
 
 jobs:
   build:
