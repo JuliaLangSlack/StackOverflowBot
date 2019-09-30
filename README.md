@@ -9,7 +9,7 @@ Every day at 11 AM UTC time, un-answered questions will be re-posted.
 ## Current state
 This repo is very much still WIP. All feeedback / suggestions / feature requests are welcome! Just open an issue on this repo. 
 
-## How to use this repo as a template: 
+## How to use this repo as a template
 The main thing you will need in order to use this code is repo is set up an appropriate WebHook for your Slack workspace and respective channel. And, unless there's another Slack out there interested in Julia (Invite me if there is), you will also need to edit the StackOverflow API query to match the tag and other parameters of your choosing. 
 
 ## Resources
