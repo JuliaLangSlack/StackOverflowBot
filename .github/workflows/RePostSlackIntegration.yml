@@ -4,7 +4,7 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 11 * * *' 
-    # Run once a day! 
+    # Run once a day at 11 am! 
     
 # on: push #Used for Debug
 
