@@ -45,7 +45,7 @@ for k,v in posts.items():
             #End of for
             
             if (answer_count == 0):
-                data = ('{ "text": "Question re-posted since no one answered yet", "attachments": [ { "color": "#36a64f", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, link, currenttime, str(answer_count)))
+                data = ('{ "text": "Question re-posted since no one answered yet", "attachments": [ { "color": "#fd1919", "title": "%s", "title_link": "%s", "text": "%s", "footer": "Slack API", "ts": %d, "fields": [ { "title": "Answer Count: %s", "short": false } ] } ] }' % (str(title), link, link, currenttime, str(answer_count)))
                 # print(data + "\n") #Debug. 
                 # *WARNING*: Un-commenting this line will push to prod. 
                 response = requests.post(webHookURL, headers=headers, data=data)
