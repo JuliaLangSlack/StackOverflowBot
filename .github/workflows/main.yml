@@ -1,6 +1,6 @@
 name: TestOfMyAction
 
-on: [push]
+on: [push] 
 
 jobs:
   build:
