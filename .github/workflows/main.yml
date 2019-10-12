@@ -9,4 +9,4 @@ jobs:
     
     steps:
     - name: SendToSlack
-      uses: logankilpatrick/SlackAndStackOverflowIntegration@0.2.0
+      uses: logankilpatrick/SlackAndStackOverflowIntegration@master
