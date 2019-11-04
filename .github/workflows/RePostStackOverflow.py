@@ -9,7 +9,7 @@ SITE = StackAPI('stackoverflow')
 
 yesterday = int(time.time()) - 86400  #start from 1 day ago. 
 
-eightDaysAgo = (yesterday - 604800) #rewind 70 days (from 1 day ago) in minutes since that's the frequency the job run's at. 
+eightDaysAgo = (yesterday - 604800) #rewind 7 days (from 1 day ago) in minutes since that's the frequency the job run's at. 
 
 posts = SITE.fetch('questions', fromdate = eightDaysAgo, todate = yesterday, tagged = 'Julia')
 
