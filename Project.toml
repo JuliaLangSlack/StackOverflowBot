@@ -1,0 +1,10 @@
+name = "StackOverflowBot"
+uuid = "3897cc02-8aa8-4eb8-aa59-cd66ac8f776d"
+authors = ["Logan Kilpatrick <lok026@g.harvard.edu>"]
+version = "0.1.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+Slack = "40bba58d-c7f1-4fe3-926e-2f246c890c3c"
+StackOverflow = "1a8df32f-26ad-40b8-8029-212bc012bd57"

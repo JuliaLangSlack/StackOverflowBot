@@ -1,30 +1,26 @@
 name: SendToSlack
 
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/30 * * * *' 
-    
-# on: push #Used for Debug
+# on:
+#   schedule:
+#     # * is a special character in YAML so you have to quote this string
+#     - cron:  '*/30 * * * *'
+
+on: push #Used for Debug
 
 jobs:
-  build:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        julia-version: [stable, lts]
+        julia-arch: [x64, x86]
+        os: [macOS-latest]
 
-    runs-on: macOS-latest
-    
     steps:
-    - uses: actions/checkout@v1
-    - name: Run stackapi install
-      run: pip install stackapi
-    - name: Run check of pwd
-      run: pwd
-    - name: Run a one-line script
-      run: python ./.github/workflows/StackOverflow.py ${{ secrets.JuliaLangSlackWebHook }}
-      
-# We can use git commands to log if FireBase does not pan out.       
-#     - name: Run git add check
-#       run: git add .
-#     - name: Run git commit check
-#       run: git commit -m "Autoupdate of Logs"
-#     - name: Run git push check
-#       run: git push
+      - uses: actions/checkout@v1.0.0
+      - run: pwd
+      - uses: julia-actions/setup-julia@latest
+        with:
+          version: ${{ matrix.julia-version }}
+      - uses: julia-actions/julia-buildpkg@master
+      - run: julia 'include("$(pwd()/src/StackOverflowBot.jl)")' ${{ secrets.JuliaLangSlackWebHook }}

@@ -1,7 +1,7 @@
 using StackOverflow, Dates, HTTP, Slack
 
-#webHookURL = ARGS[2]
-endpoint = "/services/TQVJBU534/BR8C1LMPS/42thawJz34SWSgZCpniyLBSE"
+endpoint = ARGS[1]
+
 currenttime = trunc(Int64,floor(Dates.time())) #Get current time in Unix Epcot Time
 thirtyMinsAgo = currenttime - 1800 #rewind 30 minutes since that's the frequency the job run's at.
 posts = getrecentquestionsfortag(fromdate = string(thirtyMinsAgo), todate = string(currenttime))
