@@ -9,18 +9,12 @@ on: push #Used for Debug
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        julia-version: [stable, lts]
-        julia-arch: [x64, x86]
-        os: [macOS-latest]
-
+    runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1.0.0
       - run: pwd
       - uses: julia-actions/setup-julia@latest
         with:
-          version: ${{ matrix.julia-version }}
+          version: stable
       - uses: julia-actions/julia-buildpkg@master
       - run: julia 'include("$(pwd()/src/StackOverflowBot.jl)")' ${{ secrets.JuliaLangSlackWebHook }}
