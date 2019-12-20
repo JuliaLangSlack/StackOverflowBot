@@ -17,6 +17,6 @@ jobs:
         with:
           version: 1.3.0
       - uses: julia-actions/julia-buildpkg@master
-      - run: julia --project src/StackOverflowBot.jl ${{ secrets.JuliaLangSlackWebHook }}
+      - run: julia --project src/StackOverflowBot.jl ${{ secrets.JuliaLangSlackEndPoint }}
         
         
