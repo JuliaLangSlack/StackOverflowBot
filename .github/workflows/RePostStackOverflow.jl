@@ -1,7 +1,6 @@
 using StackOverflow, Dates, HTTP, Slack
 
-#webHookURL = ARGS[2]
-endpoint = "/services/TQVJBU534/BR8C1LMPS/42thawJz34SWSgZCpniyLBSE"
+endpoint = ARGS[1]
 yesterday = trunc(Int64,floor(Dates.time()))- 86400
 eightDaysAgo = (yesterday - 604800)
 posts = getrecentquestionsfortag(fromdate = string(eightDaysAgo), todate = string(yesterday))
