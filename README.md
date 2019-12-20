@@ -6,11 +6,11 @@ If there are, it posts them in the `#stackoverflow-feed` channel on the [JuliaLa
 
 Every even numbered day of the month at 11 AM UTC time, un-answered questions will be re-posted. 
 
+This project is built in pure Julia and uses [Slack.jl](https://github.com/logankilpatrick/Slack.jl) as well as [StackOverflow.jl](https://github.com/logankilpatrick/StackOverflow.jl). 
+
 ## Current state
 This repo is very much still WIP. All feeedback / suggestions / feature requests are welcome! Just open an issue on this repo. 
 
-## How to use this repo as a template
-The main thing you will need in order to use this code is repo is set up an appropriate WebHook for your Slack workspace and respective channel. And, unless there's another Slack out there interested in Julia (Invite me if there is), you will also need to edit the StackOverflow API query to match the tag and other parameters of your choosing. 
 
 ## Resources
 YML Check: https://yamlchecker.com
