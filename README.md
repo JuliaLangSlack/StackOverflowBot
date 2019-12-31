@@ -13,11 +13,14 @@ This repo is very much still WIP. All feeedback / suggestions / feature requests
 
 
 ## Resources
-YML Check: https://yamlchecker.com
+[YML Check](https://yamlchecker.com)
 
-Slack App settings page: https://api.slack.com/apps/AN12MEVDH/general?
+[Slack App settings page](https://api.slack.com/apps/AN12MEVDH/general?)
 
-Slack Message formatting check: https://api.slack.com/docs/messages/builder?msg=%7B%22text%22%3A%20%22This%20is%20a%20line%20of%20text.%5CnAnd%20this%20is%20another%20one.%22%7D
+[Slack Message formatting check](https://api.slack.com/docs/messages/builder?msg=%7B%22text%22%3A%20%22This%20is%20a%20line%20of%20text.%5CnAnd%20this%20is%20another%20one.%22%7D)
 
-GitHub Action Scheduling Docs: https://help.github.com/en/articles/events-that-trigger-workflows#scheduled-events-schedule
+[GitHub Action Scheduling Docs](https://help.github.com/en/articles/events-that-trigger-workflows#scheduled-events-schedule)
 
+[Slack.jl](https://github.com/logankilpatrick/Slack.jl)
+
+[StackOverflow.jl](https://github.com/logankilpatrick/StackOverflow.jl)
