@@ -9,7 +9,10 @@ Every even numbered day of the month at 11 AM UTC time, un-answered questions wi
 This project is built in pure Julia and uses [Slack.jl](https://github.com/logankilpatrick/Slack.jl) as well as [StackOverflow.jl](https://github.com/logankilpatrick/StackOverflow.jl). 
 
 ## Current state
-This repo is very much still WIP. All feeedback / suggestions / feature requests are welcome! Just open an issue on this repo. 
+
+The code for this repo should now be in a static state and 100% Julia (yay). The only change on the near horizon is that Re-posted questiosn will be sent as a threaded message. This integration will happen in Slack.jl and then be utalized here. 
+
+All feeedback / suggestions / feature requests are welcome! Just open an issue on this repo. 
 
 
 ## Resources
