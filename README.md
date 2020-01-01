@@ -10,7 +10,7 @@ This project is built in pure Julia and uses [Slack.jl](https://github.com/logan
 
 ## Current state
 
-The code for this repo should now be in a static state and 100% Julia (yay). The only change on the near horizon is that Re-posted questiosn will be sent as a threaded message. This integration will happen in Slack.jl and then be utalized here. 
+The code for this repo should now be in a static state and 100% Julia (yay). The only change on the near horizon is that Re-posted questions will be sent as a threaded message. This integration will happen in Slack.jl and then be utilized here. 
 
 All feeedback / suggestions / feature requests are welcome! Just open an issue on this repo. 
 
