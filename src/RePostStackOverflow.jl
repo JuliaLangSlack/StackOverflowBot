@@ -4,8 +4,8 @@ endpoint = ARGS[1]
 yesterday = trunc(Int64,floor(Dates.time()))- 86400
 currenttime = Dates.time()
 eightDaysAgo = (yesterday - 604800)
+global flag_holder = false
 posts = getrecentquestionsfortag(fromdate = string(eightDaysAgo), todate = string(yesterday))
-flag_holder = false
 
 for question in posts
     
