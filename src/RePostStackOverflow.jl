@@ -12,7 +12,7 @@ for question in posts
     global flag_holder
     
     if flag_holder == false
-        response = sendattachmenttoslack("The following questions are being re-posted since no one answered yet:", endpoint)
+        response = sendtoslack("The following questions are being re-posted since no one answered yet:", endpoint)
         println(response)
         flag_holder = true
     end
