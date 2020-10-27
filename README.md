@@ -2,7 +2,7 @@
 Integration between Stackoverflow and Slack for the JuliaLang.slack.com workspace. 
 
 Every 30 minutes, a GitHub Action will run, which pings the StackOverflow API for new [Julia tagged questions](https://stackoverflow.com/questions/tagged/julia). 
-If there are new questions, it posts them in the `#stackoverflow-feed` channel on the [JuliaLang Slack](https://slackinvite.julialang.org).
+If there are new questions, it posts them in the `#stackoverflow-feed` channel on the [JuliaLang Slack](https://julialang.org/slack/).
 
 Every even numbered day of the month at 11 AM UTC time, un-answered questions will be re-posted. 
 
