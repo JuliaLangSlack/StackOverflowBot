@@ -14,6 +14,9 @@ The code for this repo should now be in a static state and 100% Julia (yay). The
 
 All feeedback / suggestions / feature requests are welcome! Just open an issue on this repo. 
 
+## Env Secrets
+
+`JULIALANGSLACKENDPOINT` should be in the form or `/services/TQVJBU534/BR8C1LMPS/42thawJz34SWSgZCpniyLBSE`. See https://github.com/JuliaLangSlack/Slack.jl#usage for more details. 
 
 ## Resources
 [YML Check](https://yamlchecker.com)
