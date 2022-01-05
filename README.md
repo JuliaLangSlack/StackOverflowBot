@@ -16,7 +16,7 @@ All feeedback / suggestions / feature requests are welcome! Just open an issue o
 
 ## Env Secrets
 
-`JULIALANGSLACKENDPOINT` should be in the form or `/services/TQVJBU534/BR8C1LMPS/42thawJz34SWSgZCpniyLBSE`. See https://github.com/JuliaLangSlack/Slack.jl#usage for more details. 
+`JULIALANGSLACKENDPOINT` should be in the form or `/services/TQVJBU534/BR8C1LMPS/42thawJz34SWSgZCpniyLBSE`. See https://github.com/JuliaLangSlack/Slack.jl#usage for more details.
 
 ## Resources
 [YML Check](https://yamlchecker.com)
