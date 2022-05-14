@@ -1,4 +1,4 @@
-using StackOverflow, Dates, HTTP, Slack
+using StackOverflow, Dates, HTTP, Twitter
 
 currenttime = trunc(Int64,floor(Dates.time())) #Get current time in Unix Epcot Time
 thirtyMinsAgo = currenttime - 1800 #rewind 30 minutes since that's the frequency the job run's at.
