@@ -27,4 +27,4 @@ jobs:
       - name: "Build Julia project"
         uses: julia-actions/julia-buildpkg@master
       - name: "Tun Tweet bot"
-        run: julia --project src/StackOverflowBot.jl ${{ secrets.JuliaLangSlackEndPoint }} ${{ secrets.API_Key }} ${{ secrets.API_Key_Secret }} ${{ secrets.Access_Token }} ${{ secrets.Access_Token_Secret }}
+        run: julia --project src/TwitterBot.jl ${{ secrets.API_Key }} ${{ secrets.API_Key_Secret }} ${{ secrets.Access_Token }} ${{ secrets.Access_Token_Secret }}
