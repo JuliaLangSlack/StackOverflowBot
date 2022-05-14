@@ -12,9 +12,11 @@ Access_Token_Secret = ARGS[4]
 twitterauth(API_Key, API_Key_Secret, Access_Token, Access_Token_Secret)
 
 for question in posts
-    link = question.link[1]
+    link = question.link
     
-    title = question.title[1]
+    title = question.title
+
+    print(link, title)
 
     post_status_update(status="$title #JuliaLang \n $link")
 end
