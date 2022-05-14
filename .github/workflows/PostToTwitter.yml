@@ -16,13 +16,15 @@ jobs:
       Access_Token: ${{ secrets.Access_Token }}
       Access_Token_Secret: ${{ secrets.Access_Token_Secret }}
     steps:
+      - name: "Checkout actions"
+        uses: actions/checkout@v1.0.0
       - name: "Check PWD"
-      - uses: actions/checkout@v1.0.0
-      - run: pwd
-      - name: "Setup Julia"
-      - uses: julia-actions/setup-julia@v1
+        run: pwd
+      - name: "Setup Julia actionx"
+        uses: julia-actions/setup-julia@v1
         with:
           version: 1.6.0
-      - name: "Run Tweet Bot"
-      - uses: julia-actions/julia-buildpkg@master
-      - run: julia --project src/StackOverflowBot.jl ${{ secrets.JuliaLangSlackEndPoint }}
+      - name: "Build Julia project"
+        uses: julia-actions/julia-buildpkg@master
+      - name: "Tun Tweet bot"
+        run: julia --project src/StackOverflowBot.jl ${{ secrets.JuliaLangSlackEndPoint }}
