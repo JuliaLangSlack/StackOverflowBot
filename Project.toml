@@ -1,6 +1,6 @@
 name = "StackOverflowBot"
 uuid = "3897cc02-8aa8-4eb8-aa59-cd66ac8f776d"
-authors = ["Logan Kilpatrick <lok026@g.harvard.edu>"]
+authors = ["Logan Kilpatrick <23kilpatrick23@gmail.com>"]
 version = "0.1.0"
 
 [deps]
