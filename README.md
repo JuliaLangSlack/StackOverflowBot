@@ -1,4 +1,4 @@
-# Stackoverflow and Slack
+# Stack Overflow, Twitter, and Slack
 Integration between Stackoverflow, Twitter, and Slack for the JuliaLang.slack.com workspace. 
 
 Every 30 minutes, a GitHub Action will run, which pings the StackOverflow API for new [Julia tagged questions](https://stackoverflow.com/questions/tagged/julia). 
