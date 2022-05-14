@@ -10,18 +10,18 @@ on: push #Used for Debug
 jobs:
   test:
     runs-on: macos-latest
+    env:
+      API_Key: ${{ secrets.API_Key }}
+      API_Key_Secret: ${{ secrets.API_Key_Secret }}
+      Access_Token: ${{ secrets.Access_Token }}
+      Access_Token_Secret: ${{ secrets.Access_Token_Secret }}
     steps:
-      - env:
-        API_Key: ${{ secrets.API_Key }}
-        API_Key_Secret: ${{ secrets.API_Key_Secret }}
-        Access_Token: ${{ secrets.Access_Token }}
-        Access_Token_Secret: ${{ secrets.Access_Token_Secret }}
-
+      - name: "Running Tweet Bot"
       - uses: actions/checkout@v1.0.0
       - run: pwd
       - uses: julia-actions/setup-julia@v1
         with:
-          version: 1.3.0
+          version: 1.6.0
       - uses: julia-actions/julia-buildpkg@master
       - run: julia --project src/StackOverflowBot.jl ${{ secrets.JuliaLangSlackEndPoint }}
         
