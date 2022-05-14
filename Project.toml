@@ -8,3 +8,7 @@ Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 Slack = "40bba58d-c7f1-4fe3-926e-2f246c890c3c"
 StackOverflow = "1a8df32f-26ad-40b8-8029-212bc012bd57"
+Twitter = "92393bbf-ba23-5323-a3fa-fbe1e5f35af8"
+
+[compat]
+julia = "^1.3"
