@@ -24,7 +24,7 @@ for question in posts
     # Loop through and check if the text is the same from any of the last 20 tweets
     newTweet = true
     for tweet in tweets
-        if link in tweet.text
+        if occursin(link, tweet.text)
             newTweet = false
         end
     end
