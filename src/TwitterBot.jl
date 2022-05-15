@@ -16,7 +16,27 @@ for question in posts
     
     title = question.title
 
-    print(link, title)
-
-    post_status_update(status="$title #JuliaLang \n $link")
+    myStatus = "$title #JuliaLang \n $link"
+    
+    # Get the 20 most recent tweets this account has liked
+    tweets = get_favorites_list()
+    
+    # Loop through and check if the text is the same from any of the last 20 tweets
+    newTweet = true
+    for tweet in tweets
+        if link in tweet.text
+            newTweet = false
+        end
+    end
+    
+    if newTweet == true
+        myTweet = post_status_update(status=myStatus)
+        
+        # Like every tweet we put out
+        post_favorites_create(id=myTweet.id)
+    
+    else
+        print("Duplicate tweet with link: $link .... avoided")
+    end    
+    
 end
