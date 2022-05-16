@@ -9,12 +9,12 @@ thirtyMinsAgo = currenttime - 1800 #rewind 30 minutes since that's the frequency
 posts = getrecentquestionsfortag(fromdate = string(thirtyMinsAgo), todate = string(currenttime))
 
 for question in posts
-    link = question.link[1]
-    view_count = question.view_count[1]
-    owner = question.owner[1]
-    score = question.score[1]
-    title = question.title[1]
-    answer_count = question.answer_count[1]
+    link = question.link
+    view_count = question.view_count
+    owner = question.owner
+    score = question.score
+    title = question.title
+    answer_count = question.answer_count
 
     data = Dict("attachments" => [Dict("color" => "#36a64f",
                                         "title" => "$(string(title))",
